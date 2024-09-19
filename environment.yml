@@ -1,0 +1,9 @@
+name: band-name-bot
+dependencies:
+- python>=3.5
+- pip
+- numpy
+- pip:
+  - dataclasses
+  - english_words
+  - numpy
