@@ -1,5 +1,4 @@
 from dataclasses import replace
-import tweepy
 from english_words import english_words_set
 from numpy.random import poisson
 import random
