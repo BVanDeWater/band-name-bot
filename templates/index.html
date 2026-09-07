@@ -219,20 +219,22 @@
     </div>
 
     <div class="api-tip">
-        JSON API available at <code>/api/generate</code>
+        JSON API available at <code>{{ url_for('.api_generate') }}</code>
     </div>
 </div>
 
 <div class="toast" id="toast">Copied to clipboard!</div>
 
 <script>
+    const API_ENDPOINT = {{ url_for('.api_generate')|tojson }};
+
     async function generateNew() {
         const btn = document.getElementById('generateBtn');
         btn.disabled = true;
         btn.style.opacity = '0.7';
 
         try {
-            const res = await fetch('/api/generate');
+            const res = await fetch(API_ENDPOINT);
             if (!res.ok) throw new Error('Network error');
             const data = await res.json();
 
