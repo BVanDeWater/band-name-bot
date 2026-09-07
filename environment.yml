@@ -1,10 +1,8 @@
 name: band-name-bot
 dependencies:
-- python>=3.5
-- ipython 
+- python>=3.8
 - pip
 - numpy
 - pip:
-  - dataclasses
   - english_words
-  - numpy
+  - flask
